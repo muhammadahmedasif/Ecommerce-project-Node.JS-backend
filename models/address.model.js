@@ -2,17 +2,20 @@ import mongoose from "mongoose";
 
 const addressSchema = mongoose.Schema({
 
-    address_line1: {
+    address: {
         type: String,
         default: "",
+        required: [true, "Please Provide Address"],
     },
     city: {
         type: String,
         default: "",
+        required: [true, "Please Provide city"],
     },
     state: {
         type: String,
         default: "",
+        required: [true, "Please Provide State"],
     },
     pincode: {
         type: String,
@@ -21,10 +24,11 @@ const addressSchema = mongoose.Schema({
     country: {
         type: String,
         default: "",
+        required: [true, "Please Provide Country"],
     },
     mobile: {
         type: Number,
-        default: null,
+       required: [true, "Please Provide Country"],
     },
     status: {
         type: Boolean,
